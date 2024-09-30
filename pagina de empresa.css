@@ -1,0 +1,1349 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+/* Encabezados */
+h1 { color: red; }      /* Color rojo para h1 */
+h2 { color: darkgreen; }/* Color verde oscuro para h2 */
+h3 { color: chocolate; }/* Color marrón chocolate para h3 */
+h5 { color: yellowgreen; }/* Color marrón oscuro para h5 */
+h6 { color: aqua; }     /* Color aqua para h6 */
+p  { color: black;}     /* Color negro para los párrafos */
+
+
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, black 17.8%, lightgray 100.2% );
+    transition: background 0,5s ease;
+}
+
+
+/* Color de página de empresa
+body {
+    background-image: url("imagen\ de\ fondo\ empresa.avif"); /* Ruta de la imagen de fondo
+    background-size: cover;  /*Ajusta la imagen para que cubra el área del fondo
+    background-position: center; /*Centra la imagen en el fondo 
+    background-repeat: no-repeat; /*Evita que la imagen se repita 
+    background-attachment: fixed; /*Fija la imagen de fondo cuando se desplaza la página
+    font-family: Arial, sans-serif; /*Fuente del texto en la página
+    margin: 0;/* Elimina el margen por defecto del cuerpo
+    padding: 0; /* Elimina el relleno por defecto del cuerpo
+}
+*/
+
+
+
+
+.carrito,
+.producto-lista {
+    margin-top: 40px; /* Espacio superior para carrito y lista de productos */
+}
+
+
+
+
+/* ---------------------Contenedor del encabezado superior -------------------*/
+.container {
+    width: 100%;
+    height: 136px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    position: fixed; /* Fijo para que siempre esté en la parte superior */
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* Estilos para la barra superior */
+.top-bar {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 15px; /* Espacio entre la barra superior y la barra de navegación */
+}
+
+/* -------------------------Nombre de la empresa ------------------------*/
+.imagen-titulo{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.name-feria{
+    background: radial-gradient( circle farthest-corner at 10% 20%, #55d483 17.8%, rgb(255, 77, 216) 100.2% );
+    margin-top: 25px;
+    margin-left: 20px;
+    color: black;
+    text-decoration: none; /* Quitar el subrayado por defecto */
+    border-bottom: 5px solid black; /* Grosor y color de la línea */
+    padding-bottom: 0; /* Espacio entre el texto y la línea */
+}
+/* From Uiverse.io by XMMR12 */ 
+/* === removing default button style ===*/
+.buttonpma {
+    margin: 50px;
+    height: auto;
+    background-color: red;
+    padding: 0;
+    border: none;
+    animation: r1 3s ease-in-out infinite;
+   /*linear*/
+    border: 7px #056bfa21 solid;
+    border-radius: 14px;
+  }
+  
+  /*--------------------- button styling --------------------------*/
+  .buttonpma {
+    --border-right: 6px;
+    --text-stroke-color: black; /*COLOR DE LETRA DE FONDO*/
+    --animation-color: #056bfa;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 1.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+    animation: r2 2s ease-in-out infinite;
+  }
+  /* hover */
+  .buttonpma:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 70px var(--animation-color))
+  }
+  
+  @keyframes r1 {
+    50% {
+      transform: rotate(-1deg) rotateZ(-10deg);
+    }
+  }
+  
+  @keyframes r2 {
+    50% {
+      transform: rotateX(-65deg);
+    }
+  }
+
+/* -----------------Estilos para el buscador ---------------*/
+/*esta conectado a la direccion "../universe.io/search.css"*/
+
+
+/* ---------------------- BOTON DE INICIO DE SESION --------------*/
+.log-in-btn{
+    color: white;
+    margin-top: 40px;
+    margin-left: 100px;
+    height: 42px;
+    width: 45px;
+    font-size: 24px; /* Tamaño del icono */
+    background-color: transparent;
+    color: white;
+    border: 2px solid black;
+}
+/*------------------ BOTON DE CREAR CUENTA ---------------------*/
+.log-out-btn{
+    color: white;
+    margin-left: 10px;
+    margin-top: 40px;
+    height: 42px;
+    width: 45px;
+    font-size: 24px; /* Tamaño del icono */
+    background-color: transparent;
+    border: 2px solid black;
+}
+.log-in-btn:hover,
+.log-out-btn:hover{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+/*  ----------------------Contenedor del carrito ---------------- */
+.cart-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    padding: 10px; /* Espaciado opcional */
+}
+
+/* -------------------- Estilos del botón del carrito --------------- */
+.cart {
+    height: 42px;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.cart:hover{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+/* ----------------------- Logo del carrito ------------------------- */
+.cart-logo {
+    margin-right: 5px; /* Espacio entre el logo y la cantidad */
+}
+
+/* Total del carrito */
+#cart-total {
+    margin-right: 0; /* Espacio derecho para el total del carrito */
+    font-size: 18px; /* Tamaño de fuente para el total del carrito */
+    font-weight: bold; /* Negrita para el total del carrito */
+    color: white; /* Color de texto blanco para el total del carrito */
+    background-color: black; /* Color de fondo negro para el total del carrito */
+    padding: 5px 10px; /* Relleno interno para el total del carrito */
+    border-radius: 5px; /* Bordes redondeados para el total del carrito */
+}
+
+#carritoCantidad {
+    top: 1; /* Alinea el contador en la parte superior del contenedor */
+    left: 1; /* Alinea el contador a la derecha del contenedor */
+    background-color: blueviolet; /* Color de fondo rojo para el contador */
+    margin-left: 0;
+    color: white; /* Color de texto blanco para el contador */
+    border-radius: 10px; /* Bordes redondeados para el contador */
+    padding: 2px 4px; /* Relleno interno para el contador */
+    font-size: 10px; /* Tamaño de fuente para el contador */
+    gap: 5px;
+}
+.valor{
+    color: white;
+}
+
+/* ---------------------- Estilos para la barra de navegación --------------------- */
+.navbar {
+    margin-top: -40px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20px;
+    background-color:transparent;
+    padding: 0;
+    border-bottom: -5px;
+}
+.navbar-btn{
+    color: white; /*COLOR DE TEXTO*/
+    background-color: transparent;
+    text-decoration: none;
+    gap: 10px;
+    border-radius: 0;
+    border-color: transparent;
+    cursor: pointer;
+}
+.navbar-btn:hover{
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+/* --------------------- Estilos para el menú -------------------------- */
+.Categorías{
+    color: white; /*COLOR DE TEXTO*/
+    background-color: transparent;
+    text-decoration: none;
+    gap: 10px;
+    border-radius: 0;
+    border-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.Categorías:hover{
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+.ul-menu {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    display: none; /* Oculta el menú por defecto; se mostrará con JavaScript */
+}
+
+.li-menu {
+    margin: 0; /* Elimina el margen de los elementos de la lista */
+}
+
+.ul-menu a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
+    padding: 10px; /* Añade espacio alrededor del texto dentro del enlace */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Establece el color del texto del enlace */
+    background-color: green; /* Establece el color de fondo de los enlaces */
+    border-bottom: 1px solid #ddd; /* Añade una línea gris clara debajo de cada enlace */
+}
+
+.ul-menu a:hover {
+    background-color: black; /* Cambia el color de fondo del enlace al pasar el ratón sobre él */
+}
+
+.menu{
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: auto;
+    height: 10px;
+    width: 10px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* ------------------- CAMBIAR FONDO DEL BODY --------------------- */
+/*se hace desde "../universe.io/cambiar fondo.css"*/
+
+/* ------------------- Anuncio ------------------------- */
+
+/* Asegura que el contenido de la página no quede oculto detrás del encabezado */
+.content {
+    margin-top: 80px; /* Ajusta este valor según la altura de tu encabezado */
+}
+
+/* Anuncio */
+.anuncio{
+    color: white;
+}
+.marquee-container {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+    width: 100%; /* Ancho del contenedor del anuncio */
+    padding: 10px; /* Relleno interno para el contenedor del anuncio */
+    white-space: nowrap; /* Evita que el contenido se rompa en varias líneas */
+    left: 0; /*arranca desde al principio de la izquierda*/
+    color: white; /* Color del texto */
+}
+
+.marquee-text {
+    display: inline-block; /* Muestra el contenido en línea con otros elementos */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    animation: marquee 60s linear infinite; /* Animación para el desplazamiento continuo del texto */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Empieza el texto desde el borde derecho del contenedor */
+    }
+    100% {
+        transform: translateX(-100%); /* Mueve el texto hacia el borde izquierdo del contenedor */
+    }
+}
+
+/* ------------------- CARRUSEL ------------------- */
+#conteItemsCarrusel{
+    height: 300px;
+    overflow: hidden;
+    scroll-behavior: smooth; /* Para un desplazamiento suave */
+}
+.itemCarrisule{
+    height: 100%;
+    position: relative;
+}
+.tarjetaCarrusel{
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+}
+.flechasCarrusel{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+i{
+    color: red;
+}
+#contePuntos{
+    display: flex;
+    justify-content: space-around;
+    z-index: 1001;
+}
+#contePuntos > a{
+    font-size: 1.5em;
+    font-style: none;
+    color: black;
+}
+
+
+/* ---------- Estilo para el contenedor principal de las categorías------------ */
+.categorias {
+    text-align: center; /* Centrar el contenido horizontalmente */
+    font-family: Arial, sans-serif; /* Establece la fuente de todo el contenido */
+    margin: 0; /* Elimina el margen externo por defecto */
+    padding: 20px; /* Añade un margen interno */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 400px;
+}
+
+/* Estilo para el título de las categorías */
+.titulo-categorias{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    text-decoration-color: #c82333;
+    cursor: pointer;
+}
+/* Estilo para cada item de la categoría (imagen y texto) */
+.categoria-item {
+    display: inline-block; /* Alinea los items en fila horizontal */
+    margin: 15px; /* Añade espacio entre los items */
+    text-align: center; /* Centra la imagen y el texto dentro del item */
+}
+
+/* Estilo para el texto debajo de cada imagen */
+.texto-samsung {
+    color: red; /* Color del texto */
+    font-size: 24px; /*ente para el  Tamaño de la fuente del texto */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #1b4b2c  17.8%, rgb(62, 129, 129) 100.2% );
+    border: 2px solid blue; /* Añade un borde negro al texto */
+    width: 200px;
+    display: block; /* Asegura que el texto ocupe todo el ancho disponible */
+    margin-top: 0; /* Añade un margen superior para separar el texto de la imagen */
+}
+
+/* Estilo para las imágenes */
+.img-1 {
+    width: 200px; /* Ancho fijo de la imagen */
+    height: 250px; /* Alto fijo de la imagen */
+    border: 2px solid blue; /* Añade un borde azul a la imagen */
+    display: block; /* Asegura que la imagen ocupe todo el ancho disponible */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}
+
+
+
+/* ------------------- Estilos para los productos ----------------- */
+.producto h4 p {
+    margin: 0; /* Elimina el margen en los elementos p dentro de h4 en producto */
+}
+
+
+
+
+
+/* ---------- Estilos para el carrito ---------------- */
+.carrito {
+    position: relative;
+    display: flex; /* Utiliza Flexbox para el contenedor del carrito */
+    flex-direction: column; /* Apila los elementos del carrito verticalmente */
+    gap: 10px; /* Espacio entre los elementos del carrito */
+    padding: 10px; /* Relleno interno para el contenedor del carrito */
+}
+
+
+
+
+/* ---------------- Estilos para el botón de copiar ---------------- */
+
+.btn-copiar,
+.copy-button{
+    margin-left: 0px;
+    color: white;
+    padding: 10px 15px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #408d92  17.8%, rgb(62, 129, 129) 100.2% );
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.btn-comprar{
+    margin-left: 270px;
+    color: white;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #408d92  17.8%, rgb(62, 129, 129) 100.2% );
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 20px;
+}
+.btn-vaciar {
+    margin-left: 253px;
+    padding: 10px 15px; /* Relleno interno para el botón de copiar */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #408d92  17.8%, rgb(62, 129, 129) 100.2% );
+    color: white; /* Color de texto blanco para el botón de copiar */
+    border: none; /* Sin borde para el botón de copiar */
+    border-radius: 5px; /* Bordes redondeados para el botón de copiar */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón de copiar */
+}
+
+.btn-copiar:hover,
+.copy-button:hover,
+.btn-vaciar:hover,
+.btn-comprar:hover {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #000000  17.8%, rgb(128, 228, 228) 100.2% );
+}
+
+
+
+
+
+.carrito,
+.producto-lista {
+    margin-top: 40px; /* Espacio superior para carrito y lista de productos */
+}
+
+
+  /* --------------------- CORAZONCITO ----------------*/
+
+
+
+
+/* -------------------- Estilos para el modal ------------------------- */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Posiciona el modal de forma fija en la pantalla */
+    z-index: 1; /* Asegura que el modal esté por encima de otros elementos */
+    left: 0; /* Posiciona el modal al borde izquierdo de la pantalla */
+    top: 0; /* Posiciona el modal al borde superior de la pantalla */
+    width: 100%; /* Ancho completo de la pantalla para el modal */
+    height: 100%; /* Altura completa de la pantalla para el modal */
+    overflow: auto; /* Habilita el desplazamiento si el contenido es más grande que el modal */
+    background-color: rgb(0,0,0); /* Color de fondo negro para el modal */
+    background-color: rgba(0,0,0,0.4); /* Color de fondo negro semitransparente para el modal */
+}
+
+.modal-content {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,red 17.8%,  #681800  100.2% );
+  margin: 15% auto; /* Margen superior del 15% y centrado horizontal del contenido del modal */
+    padding: 20px; /* Relleno interno para el contenido del modal */
+    border: 1px solid #888; /* Borde gris claro para el contenido del modal */
+    width: 70%; /* Ancho del contenido del modal */
+}
+
+.close {
+    color: gray; /* Color de texto gris claro para el botón de cerrar */
+    float: right; /* Alinea el botón de cerrar a la derecha */
+    font-size: 28px; /* Tamaño de fuente para el botón de cerrar */
+    font-weight: bold; /* Negrita para el botón de cerrar */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color de texto negro para el botón de cerrar al pasar el cursor o enfocar */
+    text-decoration: none; /* Elimina el subrayado del botón de cerrar al pasar el cursor o enfocar */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón de cerrar */
+}
+
+.producto-carrito {
+    margin-bottom: 10px; /* Espacio inferior para los productos en el carrito */
+    border-bottom: 1px solid #ddd; /* Borde inferior gris claro para los productos en el carrito */
+    padding-bottom: 10px; /* Relleno inferior para los productos en el carrito */
+}
+
+.btn-ir-producto {
+    margin-top: 5px; /* Espacio superior para el botón de ir al producto */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #3113db  17.8%, rgb(202, 87, 67) 100.2% );
+    color: white; /* Color de texto blanco para el botón de ir al producto */
+    border: none; /* Sin borde para el botón de ir al producto */
+    padding: 5px 10px; /* Relleno interno para el botón de ir al producto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón de ir al producto */
+}
+
+.btn-ir-producto:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro cuando se pasa el cursor sobre el botón de ir al producto */
+}
+
+
+.carrito h2 {
+    margin-bottom: 10px; /* Espacio inferior para los encabezados h2 en el carrito */
+}
+
+#carrito {
+    margin-top: 20px; /* Espacio superior para el contenedor del carrito */
+    border-top: 1px solid #ddd; /* Borde superior gris claro para el contenedor del carrito */
+    padding-top: 10px; /* Relleno superior para el contenedor del carrito */
+}
+
+/* Estilos específicos para el botón de eliminar */
+.btn-eliminar {
+    height: 24px;
+    width: 40px;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #12e05e  17.8%, rgb(0, 33, 180) 100.2% );
+}
+
+/* Estilos para el botón de eliminar al pasar el cursor sobre él */
+.btn-eliminar:hover {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #25d366  17.8%, rgb(99, 126, 245) 100.2% );
+}
+
+
+
+
+/* --------------------- FONDO NEGRO ---------------- */
+.footer {
+    width: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/*---------------------------- LOGO DE WHATSAPP -----------------------------*/
+.whatsapp-float img{
+  margin-top: 0px;
+}
+ /* Clase principal para el icono flotante de WhatsApp */
+ .whatsapp-float {
+    /*COLOR DE FONDO DEL BOTON*/
+    filter: drop-shadow(1px 1px 15px green);
+    /*BORDE REDONDEADO*/
+    border-radius: 50px;
+    /*POSICION ABSULUTA*/
+    position: absolute;
+    /* Posiciona el elemento de forma fija en la ventana */
+    position: fixed;
+    /* Ancho del icono */
+    width: 59px;
+    /* Alto del icono */
+    height: 59px;
+    /* Distancia desde el borde inferior de la ventana */
+    bottom: 10px;
+    /* Distancia desde el borde derecho de la ventana */
+    right: 10px;
+    /* Color de fondo del icono (color verde de WhatsApp) */
+    background-color: transparent;
+    /* Bordes redondeados para formar un círculo */
+    border-radius: 50px;
+    /* Centrar el contenido dentro del icono */
+    text-align: center;
+    /* Tamaño de la fuente del icono */
+    font-size: 30px;
+    /* Sombra del icono para darle un efecto de profundidad */
+    box-shadow: 2px 2px 3px none;
+    /* Asegurar que el icono esté por encima de otros elementos */
+    z-index: 100;
+}
+
+/* Clase para el ícono dentro del botón flotante de WhatsApp */
+.whatsapp-float i {
+    /* Margen superior para centrar el ícono verticalmente */
+    margin-top: 0px;
+}
+ 
+
+
+/*------------------------------ FORMA DE PAGO DE FOLDER ----------------------------------*/
+.container-forma-de-pago{
+    border: 2px solid red;
+    margin-left: 1px;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: o;
+}
+.paypal{
+    margin-left: 0;
+    border: 1px solid white;
+}
+.paypal img{
+    margin-left: 0;
+}
+
+
+/* ------------------------------- Contenedor de productos --------------------- */
+.productos-container {
+  background: transparent;
+  margin-top: 10px;
+  display: flex; /* Utiliza Flexbox para el contenedor de productos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+  gap: 15px; /* Espacio entre los elementos de productos */
+}
+
+#DESTACADOS {
+  font-weight: bold; /* Aplica negrita al texto */
+  font-family: 'Arial', sans-serif; /* Usa la fuente Arial, con sans-serif como respaldo */
+  font-style: oblique 20deg; /* Estilo de fuente en cursiva */
+  color: red; /* Aplica color rojo al texto */
+  font-size: 20px; /* Tamaño de la fuente de 25 píxeles */
+  margin-top: 20px; /* Añade un margen superior de 20 píxeles */
+  background-color: transparent; /* Fondo transparente para el texto */
+  text-align: center; /* Alinea el texto al centro del contenedor */
+}
+
+/*------------------------------- ESTILO DEL PRODUCTO ----------------------------- */
+.producto {
+  margin-bottom: 20px; /* Espacio inferior para los elementos producto */
+  margin-right: 15px;
+  margin-left: 45px;
+  height: 310px;
+  cursor: pointer;
+}
+
+/*-------------------------------- BOTON DEL CORAZON -----------------------------------*/
+.fa-heart {
+  background: red;
+  margin-top: 0px;
+  color: black;
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.fa-heart.active {
+  background: white;
+  color: red;
+}
+
+/*-------------------------------- BOTON DE AGREGAR AL CARRITO ----------------------- */
+/* From Uiverse.io by mrtqzbek11 */ 
+.btn-universeio {
+    margin-top: 0px;
+    width: 155px;
+    height: 52px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #100720;
+    transition: 0.1s;
+  }
+  
+.btn-universeio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+.btn-universeio:active {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+    transition: 0.5s;
+  }
+
+  .btn-eliminar-universeio {
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: #100720;
+    transition: 0.1s;
+  }
+  
+.btn-eliminar-universeio::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #25d366  17.8%, rgba(2,245,255,1) 100.2% );
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+.btn-eliminar-universeio:active {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient( circle farthest-corner at 10% 20%,  red 17.8%, rgba(2,245,255,1) 100.2% );
+    transition: 0.5s;
+  }
+  
+/* ------------------------------------ NOMBRE DEL PRODUCTO --------------------- */
+.name-producto{
+  margin-top: 0px;
+}
+
+/*------------------------------------- BUSCADOR DEL PRINCIPAL -------------------------------*/
+  /* From Uiverse.io by OnlyCodeChannel */ 
+.searchBox {
+    margin-top: -8px;
+    margin-left: 30px;
+    display: flex;
+    max-width: 270px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #2f3640;
+    border-radius: 50px;
+    position: relative;
+  }
+  
+  .searchButton {
+    color: white;
+    position: absolute;
+    right: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  }  
+
+  /*----------------------- FUNCION DE NOSOTROS ---------------------------- */
+  .inline-block {
+    display: inline-block;
+    vertical-align: top; /* Alinea verticalmente en la parte superior */
+    margin-right: 10%; /* Espacio entre elementos */
+    padding: 15px;/* Relleno interno para el producto */
+    width: 250px; /* Ancho fijo para el producto */
+}
+  .container-msj-NOSOTROS{
+    color: transparent;
+    border: none;
+    margin-top:auto;
+    margin-left: 10px;
+    height: 175px;
+    width: 200px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .tooltip-container-NOSOTROS {
+    border: 2px solid white;
+      margin-top: 60px;
+      width: 60px;
+      margin-left: 35%;
+      background: rgb(128, 0, 0);
+      background: linear-gradient(
+        138deg,
+        rgb(199, 57, 57) 15%,
+        rgb(97, 46, 46) 65%
+      );
+      position: relative;
+      cursor: pointer;
+      font-size: 17px;
+      padding: 0.7em 0.7em;
+      border-radius: 50px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .tooltip-container-NOSOTROS:hover {
+      border: 2px solid red;
+      background: #fff;
+      background: linear-gradient(
+        138deg,
+        rgb(230, 192, 192) 15%,
+        rgb(196, 196, 196) 65%
+      );
+      transition: all 0.6s;
+    }
+    .tooltip-container-NOSOTROS .text-NOSOTROS {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      fill: #fff;
+      transition: all 0.2s;
+    }
+    .tooltip-container-NOSOTROS:hover .text-NOSOTROS {
+      fill: rgb(3, 169, 244);
+      transition: all 0.6s;
+    }
+    #DIRECCIÓN{
+      color: white;
+    }
+
+      /* Inicio del tooltip de Maps */
+  .tooltip-1 {
+    border: 2px solid red;
+    position: absolute; /* Posiciona el tooltip de manera absoluta respecto al contenedor */
+    top: 1px; /* Coloca el tooltip justo debajo del contenedor */
+    left: 27px; /* Ajusta el tooltip ligeramente hacia la derecha */
+    transform: translateX(-50%); /* Centra el tooltip horizontalmente */
+    opacity: 0; /* Inicialmente, el tooltip es invisible */
+    visibility: hidden; /* El tooltip no es visible inicialmente */
+    background: rgb(21, 88, 0); /* Fondo blanco para el tooltip */
+    background: linear-gradient(
+      138deg,
+      rgb(57, 199, 69) 15%,
+      rgb(46, 97, 63) 65%
+    ); 
+    fill: red; /* Color de relleno inicial del contenido SVG en el tooltip */
+    padding: 10px; /* Añade espacio interno al tooltip */
+    border-radius: 50px; /* Bordes redondeados del tooltip */
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s; /* Transiciones suaves para la visibilidad, posición y fondo */
+    z-index: 1; /* Asegura que el tooltip esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera debajo del tooltip */
+  }
+  
+  /* Estilos para cuando el contenedor del tooltip se encuentra en estado hover */
+  .tooltip-container-NOSOTROS:hover .tooltip-1 {
+    top: 60px; /* Mueve el tooltip un poco más hacia abajo */
+    opacity: 1; /* Hace visible el tooltip */
+    visibility: visible; /* El tooltip se vuelve visible */
+    background: green; /* Mantiene el fondo blanco */
+    border-radius: 50px; /* Mantiene los bordes redondeados */
+    transform: translate(-50%, -5px); /* Ajusta la posición del tooltip al pasar el mouse */
+    display: flex; /* Aplica flexbox al contenido del tooltip */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+  }
+  
+  /* Estilos para cuando el tooltip mismo se encuentra en estado hover */
+  .tooltip-container-NOSOTROS .tooltip-1:hover {
+    background: #00ff15; /* Cambia el fondo del tooltip a azul */
+    fill: red; /* Cambia el color del contenido SVG a blanco */
+  }
+  
+  /* Fin del tooltip de Maps */
+  /*--------------------- FUNCION DE CONTACTOS ------------------------------*/
+  .container-msj{
+    color: transparent;
+    border: none;
+    margin-top:auto;
+    margin-left: 10px;
+    height: 175px;
+    width: 200px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .tooltip-container {
+    border: 2px solid white;
+      margin-top: 60px;
+      width: 60px;
+      margin-left: 35%;
+      background: rgb(128, 0, 0);
+      background: linear-gradient(
+        138deg,
+        rgb(199, 57, 57) 15%,
+        rgb(97, 46, 46) 65%
+      );
+      position: relative;
+      cursor: pointer;
+      font-size: 17px;
+      padding: 0.7em 0.7em;
+      border-radius: 50px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .tooltip-container:hover {
+      border: 2px solid rgb(3, 169, 244);
+      background: #fff;
+      background: linear-gradient(
+        138deg,
+        rgb(230, 192, 192) 15%,
+        rgb(196, 196, 196) 65%
+      );
+      transition: all 0.6s;
+    }
+    .tooltip-container .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      fill: #fff;
+      transition: all 0.2s;
+    }
+    .tooltip-container:hover .text {
+      fill: rgb(3, 169, 244);
+      transition: all 0.6s;
+    }
+    
+  /* Inicio del tooltip de Twitter */
+  .tooltip1 {
+    border: 2px solid red;
+    position: absolute; /* Posiciona el tooltip de manera absoluta respecto al contenedor */
+    top: 1px; /* Coloca el tooltip justo debajo del contenedor */
+    left: 27px; /* Ajusta el tooltip ligeramente hacia la derecha */
+    transform: translateX(-50%); /* Centra el tooltip horizontalmente */
+    opacity: 0; /* Inicialmente, el tooltip es invisible */
+    visibility: hidden; /* El tooltip no es visible inicialmente */
+    background: #fff; /* Fondo blanco para el tooltip */
+    fill: #03a9f4; /* Color de relleno inicial del contenido SVG en el tooltip */
+    padding: 10px; /* Añade espacio interno al tooltip */
+    border-radius: 50px; /* Bordes redondeados del tooltip */
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s; /* Transiciones suaves para la visibilidad, posición y fondo */
+    z-index: 1; /* Asegura que el tooltip esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera debajo del tooltip */
+  }
+  
+  /* Estilos para cuando el contenedor del tooltip se encuentra en estado hover */
+  .tooltip-container:hover .tooltip1 {
+    top: 60px; /* Mueve el tooltip un poco más hacia abajo */
+    opacity: 1; /* Hace visible el tooltip */
+    visibility: visible; /* El tooltip se vuelve visible */
+    background: #fff; /* Mantiene el fondo blanco */
+    border-radius: 50px; /* Mantiene los bordes redondeados */
+    transform: translate(-50%, -5px); /* Ajusta la posición del tooltip al pasar el mouse */
+    display: flex; /* Aplica flexbox al contenido del tooltip */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+  }
+  
+  /* Estilos para cuando el tooltip mismo se encuentra en estado hover */
+  .tooltip-container:hover .tooltip1:hover {
+    background: #03a9f4; /* Cambia el fondo del tooltip a azul */
+    fill: #fff; /* Cambia el color del contenido SVG a blanco */
+  }
+  
+  /* Fin del tooltip de Twitter */
+  
+    
+    /* Inicio do tooltip facebook */
+    .tooltip2 {
+        border: 2px solid red;
+      position: absolute;
+      top: 20px;
+      left:28px;
+      transform: translateX(80%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: blue;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .tooltip-container:hover .tooltip2 {
+      top: -45px;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(-50%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip2:hover {
+      background: #0462df;
+      fill: #fff;
+    }
+    /* Fim do tooltip facebook */
+    
+    /* Inicio do tooltip whatsApp */
+    .tooltip3 {
+        border: 2.5px solid red;
+      position: absolute;
+      top: 11px;
+      left: 28px;
+      transform: translateX(80%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #1db954;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip3 {
+      top: 10%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(85%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip3:hover {
+      background: #1db954;
+      fill: #fff;
+    }
+    /* Fim do tooltip whatsApp */
+    
+    /* Inicio do tooltip Discord */
+    .tooltip4 {
+        border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      right: 45px;
+      transform: translateX(80%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #8c9eff;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip4 {
+      top: 10%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(-50%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip4:hover {
+      background: #8c9eff;
+      fill: #fff;
+    }
+    /* Fim do tooltip Discord */
+    
+    /* Inicio do tooltip pinterest */
+    .tooltip5 {
+        border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      right: 80px;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #bd081c;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip5 {
+      top: -78%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip5:hover {
+      background: #bd081c;
+      fill: #fff;
+    }
+    /* Fim do tooltip pinterest */
+    
+    /* Inicio do tooltip dribbble */
+    .tooltip6 {
+      border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      left: 35%;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #ea4c89;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip6 {
+      top: -79%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip6:hover {
+      background: #ea4c89;
+      fill: #fff;
+    }
+    /* Fim do tooltip dribbble */
+    
+    /* Inicio do tooltip github */
+    .tooltip7 {
+        border: 2.5px solid red;
+      position: absolute;
+      top: 50px;
+      left: 16px;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #000;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .tooltip-container:hover .tooltip7 {
+      top: 104%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip7:hover {
+      background: #000;
+      fill: #fff;
+    }
+    /* Fim do tooltip github */
+    
+    /* Inicio do tooltip reddit */
+    .tooltip8 {
+        border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      right: 80px;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #ff4500;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip8 {
+      top: 101%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip8:hover {
+      background: #ff4500;
+      fill: #fff;
+    }
+    /* Fim do tooltip reddit */
+    
+
+  /*----------------------------- FORMA DE PAGO -------------------------*/
+  /* From Uiverse.io by joe-watson-sbf */ 
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 300px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    color: red;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  .Transferencias{
+    color: black;
+    font-size: 16px;
+    text-align: left;
+  }
+  .Alias{
+    color: black;
+    text-align: left;
+  }
+  .CBU{
+  color: black;
+  text-align: left;
+  }
+  .tarjetas{
+    color: black;
+    text-align: center;
+  }
+  .tarjetas-img{
+    display: flex;
+    flex-direction: row; /* Coloca los elementos en fila */
+    justify-content: space-between; /* Distribuye las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    gap: 0;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+       rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+    color: coral;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+       bisque 40%, rgb(255, 185, 160) 78%);
+    color: white;
+    transform: rotateY(180deg);
+  }

@@ -1,0 +1,86 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* COLOR DE PAGINA PRINCIPAL */
+body {
+    background-image: url('../fotos/SEM.jpeg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra el área del fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo cuando se desplaza la página */
+
+}
+
+.title-text{
+    margin-left: 600px;
+    margin-right: 640px;
+    color: white;
+    font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+/*----------------------- BOTONES DE REGISTRO E INICIO DE SESION ---------------------*/
+.log-out{
+    margin-left: 1100px;
+    margin-right: 100px;
+    margin-top: -30px;
+}
+
+/* ---------------------- BOTON DE INICIO DE SESION --------------*/
+.log-in-btn{
+    color: white;
+    margin-top: 40px;
+    margin-right: 30px;
+    height: 42px;
+    width: 45px;
+    font-size: 24px; /* Tamaño del icono */
+    background-color: transparent;
+    color: white;
+    border: 2px solid black;
+}
+/*------------------ BOTON DE CREAR CUENTA ---------------------*/
+.log-out-btn{
+    color: white;
+    margin-right: -810px;
+    margin-top: 40px;
+    height: 42px;
+    width: 45px;
+    font-size: 24px; /* Tamaño del icono */
+    background-color: transparent;
+    border: 2px solid black;
+}
+.log-in-btn:hover,
+.log-out-btn:hover{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+.texto{
+    color: white;
+    font-size: 25px;
+    background: transparent;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+/*espacio entre imagenes*/
+.image-container {
+    margin-top: 50px;
+    display: flex; /* Utiliza Flexbox para el contenedor de productos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 45px; /* Espacio entre los elementos de productos */
+    align-items: center; /* Alineación vertical */
+    height: 100vh; /* Altura del contenedor para demostrar alineación vertical */
+}
+
+.image-container img {
+    margin: 10px; /* Espacio entre imágenes */
+    text-align: center; /* Centrar texto debajo de las imágenes */
+}

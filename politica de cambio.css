@@ -1,0 +1,751 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, white 17.8%, cyan 100.2% );
+}
+/* ---------------------Contenedor del encabezado superior -------------------*/
+.container {
+    width: 100%;
+    height: 136px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+  }
+  /* Estilos para la barra superior */
+  .top-bar {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 15px; /* Espacio entre la barra superior y la barra de navegación */
+  }
+  
+  /* -------------------------Nombre de la empresa ------------------------*/
+  .imagen-titulo{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  .name-feria{
+    background: radial-gradient( circle farthest-corner at 10% 20%, #55d483 17.8%, rgb(255, 77, 216) 100.2% );
+    margin-top: 25px;
+    margin-left: 20px;
+    color: black;
+    text-decoration: none; /* Quitar el subrayado por defecto */
+    border-bottom: 5px solid black; /* Grosor y color de la línea */
+    padding-bottom: 0; /* Espacio entre el texto y la línea */
+  }
+
+  /*------------------------------------------ NOMBRE DE LA EMPRESA ---------------------------------- */ 
+.buttonpma {
+    margin: 50px;
+    height: auto;
+    background-color: red;
+    padding: 0;
+    border: none;
+    animation: r1 3s ease-in-out infinite;
+   /*linear*/
+    border: 7px #056bfa21 solid;
+    border-radius: 14px;
+  }
+  
+  /*--------------------- button styling --------------------------*/
+  .buttonpma {
+    --border-right: 6px;
+    --text-stroke-color: black; /*COLOR DE LETRA DE FONDO*/
+    --animation-color: #056bfa;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 1.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+    animation: r2 2s ease-in-out infinite;
+  }
+  /* hover */
+  .buttonpma:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 70px var(--animation-color))
+  }
+  
+  @keyframes r1 {
+    50% {
+      transform: rotate(-1deg) rotateZ(-10deg);
+    }
+  }
+  
+  @keyframes r2 {
+    50% {
+      transform: rotateX(-65deg);
+    }
+  }
+  
+  /* -----------------Estilos para el buscador ---------------*/
+  /*esta conectado a la direccion "../universe.io/search.css"*/
+  
+  
+  /* ---------------------- BOTON DE INICIO DE SESION --------------*/
+  .log-in-btn{
+    color: white;
+    margin-top: 40px;
+    margin-left: 100px;
+    height: 42px;
+    width: 45px;
+    font-size: 24px; /* Tamaño del icono */
+    background-color: transparent;
+    color: white;
+    border: 2px solid black;
+  }
+  /*------------------ BOTON DE CREAR CUENTA ---------------------*/
+  .log-out-btn{
+    color: white;
+    margin-left: 10px;
+    margin-top: 40px;
+    height: 42px;
+    width: 45px;
+    font-size: 24px; /* Tamaño del icono */
+    background-color: transparent;
+    border: 2px solid black;
+  }
+  .log-in-btn:hover,
+  .log-out-btn:hover{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  
+  /* ---------------------- Estilos para la barra de navegación --------------------- */
+.navbar {
+    margin-top: -40px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 20px;
+    background-color:transparent;
+    padding: 0;
+    border-bottom: -5px;
+  }
+  .navbar-btn{
+    color: white; /*COLOR DE TEXTO*/
+    background-color: transparent;
+    text-decoration: none;
+    gap: 10px;
+    border-radius: 0;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  .navbar-btn:hover{
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  /* --------------------- Estilos para el menú -------------------------- */
+  .Categorías{
+    color: white; /*COLOR DE TEXTO*/
+    background-color: transparent;
+    text-decoration: none;
+    gap: 10px;
+    border-radius: 0;
+    border-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  .Categorías:hover{
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  .ul-menu {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    display: none; /* Oculta el menú por defecto; se mostrará con JavaScript */
+  }
+  
+  .li-menu {
+    margin: 0; /* Elimina el margen de los elementos de la lista */
+  }
+  
+  .ul-menu a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
+    padding: 10px; /* Añade espacio alrededor del texto dentro del enlace */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Establece el color del texto del enlace */
+    background-color: green; /* Establece el color de fondo de los enlaces */
+    border-bottom: 1px solid #ddd; /* Añade una línea gris clara debajo de cada enlace */
+  }
+  
+  .ul-menu a:hover {
+    background-color: black; /* Cambia el color de fondo del enlace al pasar el ratón sobre él */
+  }
+  
+  .menu{
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: auto;
+    height: 10px;
+    width: 10px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* ------------------- CAMBIAR FONDO DEL BODY --------------------- */
+  /*se hace desde "../universe.io/cambiar fondo.css"*/
+
+.texto-completo{
+    color: black;
+    font-size: 36px;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+.boton-gmail{
+    color: green;
+    font-size: 36px;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.title{
+    color: red;
+    font-size: 36px;
+    padding: 0px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+/* --------------------- FONDO NEGRO ---------------- */
+.footer {
+    width: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #681800  17.8%, red 100.2% );
+    display: flex;
+    margin-top: 100px;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*---------------------------- LOGO DE WHATSAPP -----------------------------*/
+.whatsapp-float img{
+    margin-top: 0px;
+  }
+   /* Clase principal para el icono flotante de WhatsApp */
+   .whatsapp-float {
+     /*COLOR DE FONDO DEL BOTON*/
+     filter: drop-shadow(5px 5px 5px green);
+     /*BORDE REDONDEADO*/
+     border-radius: 50px;
+     /*POSICION ABSULUTA*/
+     position: absolute;
+      /* Posiciona el elemento de forma fija en la ventana */
+      position: fixed;
+      /* Ancho del icono */
+      width: 60px;
+      /* Alto del icono */
+      height: 60px;
+      /* Distancia desde el borde inferior de la ventana */
+      bottom: 10px;
+      /* Distancia desde el borde derecho de la ventana */
+      right: 10px;
+      /* Color de fondo del icono (color verde de WhatsApp) */
+      background-color: transparent;
+      /* Bordes redondeados para formar un círculo */
+      border-radius: 50px;
+      /* Centrar el contenido dentro del icono */
+      text-align: center;
+      /* Tamaño de la fuente del icono */
+      font-size: 30px;
+      /* Sombra del icono para darle un efecto de profundidad */
+      box-shadow: 2px 2px 3px none;
+      /* Asegurar que el icono esté por encima de otros elementos */
+      z-index: 100;
+  }
+  
+  /* Clase para el ícono dentro del botón flotante de WhatsApp */
+  .whatsapp-float i {
+      /* Margen superior para centrar el ícono verticalmente */
+      margin-top: 0px;
+  }
+
+  
+  /*----------------------- FUNCION DE NOSOTROS ---------------------------- */
+  .inline-block {
+    border: none;
+    margin-left: 100px;
+    display: inline-block;
+    vertical-align: top; /* Alinea verticalmente en la parte superior */
+    margin-right: 10%; /* Espacio entre elementos */
+    padding: 15px;/* Relleno interno para el producto */
+    width: 250px; /* Ancho fijo para el producto */
+}
+  .container-msj-NOSOTROS{
+    color: transparent;
+    border: none;
+    margin-top:auto;
+    margin-left: 10px;
+    height: 175px;
+    width: 200px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .tooltip-container-NOSOTROS {
+    border: 2px solid white;
+      margin-top: 60px;
+      width: 60px;
+      margin-left: 35%;
+      background: rgb(128, 0, 0);
+      background: linear-gradient(
+        138deg,
+        rgb(199, 57, 57) 15%,
+        rgb(97, 46, 46) 65%
+      );
+      position: relative;
+      cursor: pointer;
+      font-size: 17px;
+      padding: 0.7em 0.7em;
+      border-radius: 50px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .tooltip-container-NOSOTROS:hover {
+      border: 2px solid red;
+      background: #fff;
+      background: linear-gradient(
+        138deg,
+        rgb(230, 192, 192) 15%,
+        rgb(196, 196, 196) 65%
+      );
+      transition: all 0.6s;
+    }
+    .tooltip-container-NOSOTROS .text-NOSOTROS {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      fill: #fff;
+      transition: all 0.2s;
+    }
+    .tooltip-container-NOSOTROS:hover .text-NOSOTROS {
+      fill: rgb(3, 169, 244);
+      transition: all 0.6s;
+    }
+    #DIRECCIÓN{
+      color: white;
+    }
+
+      /* Inicio del tooltip de Maps */
+  .tooltip-1 {
+    border: 2px solid red;
+    position: absolute; /* Posiciona el tooltip de manera absoluta respecto al contenedor */
+    top: 1px; /* Coloca el tooltip justo debajo del contenedor */
+    left: 27px; /* Ajusta el tooltip ligeramente hacia la derecha */
+    transform: translateX(-50%); /* Centra el tooltip horizontalmente */
+    opacity: 0; /* Inicialmente, el tooltip es invisible */
+    visibility: hidden; /* El tooltip no es visible inicialmente */
+    background: rgb(21, 88, 0); /* Fondo blanco para el tooltip */
+    background: linear-gradient(
+      138deg,
+      rgb(57, 199, 69) 15%,
+      rgb(46, 97, 63) 65%
+    ); 
+    fill: red; /* Color de relleno inicial del contenido SVG en el tooltip */
+    padding: 10px; /* Añade espacio interno al tooltip */
+    border-radius: 50px; /* Bordes redondeados del tooltip */
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s; /* Transiciones suaves para la visibilidad, posición y fondo */
+    z-index: 1; /* Asegura que el tooltip esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera debajo del tooltip */
+  }
+  
+  /* Estilos para cuando el contenedor del tooltip se encuentra en estado hover */
+  .tooltip-container-NOSOTROS:hover .tooltip-1 {
+    top: 60px; /* Mueve el tooltip un poco más hacia abajo */
+    opacity: 1; /* Hace visible el tooltip */
+    visibility: visible; /* El tooltip se vuelve visible */
+    background: green; /* Mantiene el fondo blanco */
+    border-radius: 50px; /* Mantiene los bordes redondeados */
+    transform: translate(-50%, -5px); /* Ajusta la posición del tooltip al pasar el mouse */
+    display: flex; /* Aplica flexbox al contenido del tooltip */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+  }
+  
+  /* Estilos para cuando el tooltip mismo se encuentra en estado hover */
+  .tooltip-container-NOSOTROS .tooltip-1:hover {
+    background: #00ff15; /* Cambia el fondo del tooltip a azul */
+    fill: red; /* Cambia el color del contenido SVG a blanco */
+  }
+  
+  /* Fin del tooltip de Maps */
+  /*--------------------- FUNCION DE CONTACTOS ------------------------------*/
+  #CONTACTOS{
+    color: white;
+    margin-left: 40px;
+    border: nnone;
+    width: 110px;
+    height: 25px;
+  }  
+  .container-msj{
+    color: transparent;
+    border: none;
+    margin-top:auto;
+    border: none;
+    margin-left: -35px;
+    height: 175px;
+    width: 200px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .tooltip-container {
+    border: 2px solid white;
+      margin-top: 60px;
+      width: 60px;
+      margin-left: 35%;
+      background: rgb(128, 0, 0);
+      background: linear-gradient(
+        138deg,
+        rgb(199, 57, 57) 15%,
+        rgb(97, 46, 46) 65%
+      );
+      position: relative;
+      cursor: pointer;
+      font-size: 17px;
+      padding: 0.7em 0.7em;
+      border-radius: 50px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .tooltip-container:hover {
+      border: 2px solid rgb(3, 169, 244);
+      background: #fff;
+      background: linear-gradient(
+        138deg,
+        rgb(230, 192, 192) 15%,
+        rgb(196, 196, 196) 65%
+      );
+      transition: all 0.6s;
+    }
+    .tooltip-container .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      fill: #fff;
+      transition: all 0.2s;
+    }
+    .tooltip-container:hover .text {
+      fill: rgb(3, 169, 244);
+      transition: all 0.6s;
+    }
+    
+  /* Inicio del tooltip de Twitter */
+  .tooltip1 {
+    border: 2px solid red;
+    position: absolute; /* Posiciona el tooltip de manera absoluta respecto al contenedor */
+    top: 1px; /* Coloca el tooltip justo debajo del contenedor */
+    left: 27px; /* Ajusta el tooltip ligeramente hacia la derecha */
+    transform: translateX(-50%); /* Centra el tooltip horizontalmente */
+    opacity: 0; /* Inicialmente, el tooltip es invisible */
+    visibility: hidden; /* El tooltip no es visible inicialmente */
+    background: #fff; /* Fondo blanco para el tooltip */
+    fill: #03a9f4; /* Color de relleno inicial del contenido SVG en el tooltip */
+    padding: 10px; /* Añade espacio interno al tooltip */
+    border-radius: 50px; /* Bordes redondeados del tooltip */
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s; /* Transiciones suaves para la visibilidad, posición y fondo */
+    z-index: 1; /* Asegura que el tooltip esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera debajo del tooltip */
+  }
+  
+  /* Estilos para cuando el contenedor del tooltip se encuentra en estado hover */
+  .tooltip-container:hover .tooltip1 {
+    top: 60px; /* Mueve el tooltip un poco más hacia abajo */
+    opacity: 1; /* Hace visible el tooltip */
+    visibility: visible; /* El tooltip se vuelve visible */
+    background: #fff; /* Mantiene el fondo blanco */
+    border-radius: 50px; /* Mantiene los bordes redondeados */
+    transform: translate(-50%, -5px); /* Ajusta la posición del tooltip al pasar el mouse */
+    display: flex; /* Aplica flexbox al contenido del tooltip */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+  }
+  
+  /* Estilos para cuando el tooltip mismo se encuentra en estado hover */
+  .tooltip-container:hover .tooltip1:hover {
+    background: #03a9f4; /* Cambia el fondo del tooltip a azul */
+    fill: #fff; /* Cambia el color del contenido SVG a blanco */
+  }
+  
+  /* Fin del tooltip de Twitter */
+  
+    
+    /* Inicio do tooltip facebook */
+    .tooltip2 {
+        border: 2px solid red;
+      position: absolute;
+      top: 20px;
+      left:28px;
+      transform: translateX(80%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: blue;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .tooltip-container:hover .tooltip2 {
+      top: -45px;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(-50%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip2:hover {
+      background: #0462df;
+      fill: #fff;
+    }
+    /* Fim do tooltip facebook */
+    
+    /* Inicio do tooltip whatsApp */
+    .tooltip3 {
+        border: 2.5px solid red;
+      position: absolute;
+      top: 11px;
+      left: 28px;
+      transform: translateX(80%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #1db954;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip3 {
+      top: 10%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(85%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip3:hover {
+      background: #1db954;
+      fill: #fff;
+    }
+    /* Fim do tooltip whatsApp */
+    
+    /* Inicio do tooltip Discord */
+    .tooltip4 {
+        border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      right: 45px;
+      transform: translateX(80%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #8c9eff;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip4 {
+      top: 10%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(-50%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip4:hover {
+      background: #8c9eff;
+      fill: #fff;
+    }
+    /* Fim do tooltip Discord */
+    
+    /* Inicio do tooltip pinterest */
+    .tooltip5 {
+        border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      right: 80px;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #bd081c;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip5 {
+      top: -78%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip5:hover {
+      background: #bd081c;
+      fill: #fff;
+    }
+    /* Fim do tooltip pinterest */
+    
+    /* Inicio do tooltip dribbble */
+    .tooltip6 {
+      border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      left: 35%;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #ea4c89;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip6 {
+      top: -79%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip6:hover {
+      background: #ea4c89;
+      fill: #fff;
+    }
+    /* Fim do tooltip dribbble */
+    
+    /* Inicio do tooltip github */
+    .tooltip7 {
+        border: 2.5px solid red;
+      position: absolute;
+      top: 50px;
+      left: 16px;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #000;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .tooltip-container:hover .tooltip7 {
+      top: 104%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip7:hover {
+      background: #000;
+      fill: #fff;
+    }
+    /* Fim do tooltip github */
+    
+    /* Inicio do tooltip reddit */
+    .tooltip8 {
+        border: 2px solid red;
+      position: absolute;
+      top: 100%;
+      right: 80px;
+      transform: translateX(70%);
+      opacity: 0;
+      visibility: hidden;
+      background: #fff;
+      fill: #ff4500;
+      padding: 10px;
+      border-radius: 50px;
+      transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip-container:hover .tooltip8 {
+      top: 101%;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      transform: translate(70%, -5px);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tooltip-container:hover .tooltip8:hover {
+      background: #ff4500;
+      fill: #fff;
+    }
+    /* Fim do tooltip reddit */

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMBRE DE LA EMPRESA PRINCIPAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"> defer</script>
+    
+    
+<style>
+    /* Estilo para el resaltado */
+    .resaltar-palabra {
+            background-color: #ffcc00; /* Color de fondo para la palabra */
+            font-weight: bold; /* Hacer la palabra más destacada */
+            text-decoration: underline; /* Subrayar la palabra */
+        }        
+        .indent {
+            margin-left: 40px; /* Ajusta el valor según necesites */
+        }
+</style>
+
+
+</head>
+<body>
+    <div class="title-text">S E M
+    </div>
+
+<div class="log-out">
+    <button class="log-in-btn"> <a href="login.html" target="_blank"><img src="person outline.svg" alt="icon person" width="90%" height="90%"></a></button>
+    <button class="log-out-btn"> <a href="pagina de registro.html" target="_blank"><img src="persona login.svg" alt="icon person"width="90%" height="90%"></a></button>
+</div>
+
+<div class="image-container">
+
+    <div>
+    <a href="pagina de empresa.html?Saantulii" target="_blank">
+        <img src="../fotos/el sanjon.jpg" alt="ERROR al cargar foto" width="300" height="320">
+     <p class="texto">El Zanjon</p></a>
+    </div>
+
+    <div>
+    <a href="../X/index.html" target="_blank">
+        <img src="../X/hotel marilyn.jpg" alt="ERROR al cargar foto" width="300" height="320">
+        <p class="texto">Hotel Marilyn</p></a>
+    </div>
+
+
+    <div>
+    <a href="../proyecto auto/Index.HTML" target="_blank">
+        <img src="../proyecto auto/logo.avif" alt="ERROR al cargar la foto" width="300" height="320">
+        <p class="texto">Renovacion y Automatizacion del Auto</p></a>
+    </div>
+
+    <div>
+        <a href="../cv/index.html" target="_blank">
+            <img src="../fotos/santuli.png" alt="ERROR al cargar la foto" width="300" height="320">
+            <p class="texto">CV de Muñoz</p></a>
+        </div>
+
+        <div>
+            <a href="../7 de octubre/index.html" target="_blank">
+                <img src="../7 de octubre/Captura de pantalla 2024-08-21 170538.png" alt="ERROR al cargar la foto" width="300" height="320">
+                <p class="texto">Pquia Ntra. Sra. Del Rosario</p></a>
+            </div>
+
+            <div>
+                <a href="../samsung/Samsung.html" target="_blank">
+                    <img src="../fotos/foto aestetic de samsung.jpg" alt="ERROR al cargar la foto" width="300" height="320">
+                    <p class="texto">Samsung</p></a>
+                </div>
+
+                <div>
+                    <a href="../motorola/motorola.html" target="_blank">
+                        <img src="../fotos/foto aestetic de motorola.jpg" alt="ERROR AL MOSTRAR IMAGEN"
+                        width="300" height="320">
+                        <p class="texto">Motorola</p></a>
+                </div>
+
+
+                <div>
+                    <a href="../apple/apple.html" target="_blank">
+                        <img src="../fotos/foto aestetic de iphone.jpg" alt="ERROR al cargar la foto" width="300" height="320">
+                    <p class="texto">Apple</p></a>
+                </div>
+
+                <div>
+                    <a href="../TCL/TCL.html" target="_blank">
+                        <img src="../fotos/foto aestetic dE TCL.jpg" alt="ERROR al cargar la foto" width="300" height="320">
+                    <p class="texto">TCL</p></a>
+                </div>
+                
+                <div>
+                    <a href="../xiaomi/xiaomi.html" target="_blank">
+                        <img src="../fotos/foto aestetic de xiomi.jpg" alt="ERROR al cargar la foto" width="300" height="320">
+                    <p class="texto">Xiaomi</p></a>
+                </div>
+</div>
+
+    <script>
+        // Función para resaltar la palabra según el parámetro de URL
+        function resaltarPalabra() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const resaltar = urlParams.get('resaltar');
+    
+            console.log('URL Parameters:', urlParams.toString()); // Depuración
+            console.log('Parameter "resaltar":', resaltar); // Depuración
+    
+            if (resaltar && resaltar.toUpperCase() === 'PAGINA-PRINCIPAL') {
+                const elemento = document.getElementById('PAGINA-PRINCIPAL');
+                if (elemento) {
+                    console.log('Elemento encontrado:', elemento); // Depuración
+                    // Desplazar la vista hacia el elemento
+                    elemento.scrollIntoView({ behavior: 'smooth' });
+    
+                    // Agregar la clase para el resaltado
+                    elemento.classList.add('resaltar-palabra');
+    
+                    // Remover la clase después de 3 segundos (3000 ms)
+                    setTimeout(() => {
+                        elemento.classList.remove('resaltar-palabra');
+                    }, 3000); // Tiempo en milisegundos
+                }
+            }
+        }
+    
+        // Ejecutar la función al cargar la página
+        document.addEventListener('DOMContentLoaded', resaltarPalabra);
+    </script>
+</body>
+</html>
